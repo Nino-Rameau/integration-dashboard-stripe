@@ -9,10 +9,9 @@ const data = [
   { name: '2025', a1: 19, a2: 12, a3: 16, a4: 20, a5: 14 },
 ];
 
-
-export default function Example() {
+const GraphNote = () => {
   return (
-    <div style={{ width: '100%' }}>
+    <div className='h-96 w-2xl md:w-4xl flex justify-center items-center'>
       <ResponsiveContainer width="100%" height={200}>
         <LineChart
           width={500}
@@ -31,7 +30,7 @@ export default function Example() {
           <Tooltip />
           <Line connectNulls type="monotone" dataKey="a1" stroke="#EBB9DF" fill="#EBB9DF" />
           <Line connectNulls type="monotone" dataKey="a2" stroke="#60992D" fill="#60992D" />
-          <Line connectNulls type="monotone" dataKey="a3" stroke="#FCFC62" fill="#FCFC62" />
+          <Line connectNulls type="monotone" dataKey="a3" stroke="#FC3162" fill="#FC3162" />
           <Line connectNulls type="monotone" dataKey="a4" stroke="#AFECE7" fill="#AFECE7" />
           <Line connectNulls type="monotone" dataKey="a5" stroke="#6A5D7B" fill="#6A5D7B" />
         </LineChart>
@@ -39,3 +38,4 @@ export default function Example() {
     </div>
   );
 }
+ export default GraphNote;
