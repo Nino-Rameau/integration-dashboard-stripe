@@ -1,27 +1,35 @@
-import { Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
+import { Pie, PieChart, ResponsiveContainer, Tooltip, Cell } from 'recharts';
 
-const annee = [
-  { name: 'Année 1', value: 40 },
-  { name: 'Année 2', value: 35 },
-  { name: 'Année 3', value: 33 },
-  { name: 'Année 4', value: 25 },
-  { name: 'Année 5', value: 24 },
+const color = [
+  "#e94a34",
+  "#4caf50", 
+  "#2196f3", 
+  "#ff9800", 
+  "#9c27b0", 
+  "#00bcd4", 
+  "#ffc107"  
 ];
 
-const GraphRond = () => {
+const GraphRond = ( {data} ) => {
   return (
     <>
       <div className='h-96 w-96'>
         <ResponsiveContainer width="100%" height="100%">
           <PieChart width={900} height={900}>
             <Pie
-              dataKey="value"
-              isAnimationActive={false}
-              data={annee}
-              outerRadius={80}
-              fill="#e94a34"
-              label
+            dataKey="value"
+            isAnimationActive={false}
+            data={data}
+            outerRadius={80}
+            label
+            >
+            {data.map((ligne, index) => (
+              <Cell 
+                key={`cell-${index}`} 
+                fill={color[index % color.length]} 
               />
+            ))}
+          </Pie>
             <Tooltip />
           </PieChart>
         </ResponsiveContainer>

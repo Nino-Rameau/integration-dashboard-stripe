@@ -67,11 +67,14 @@ return (
     
     {/* DESKTOP */}
     <nav className="hidden md:flex space-x-4">
-      <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/dw">Développement Web</Link> 
-      <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/cg">Communication Graphique</Link> 
-      <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/cd">Communication Digital</Link> 
-      <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/md">Marketing Digital</Link> 
-
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/etudiant">Etudiants</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/intervenant">Intervenant</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a1">A1</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a2">A2</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a3">A3</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a4">A4</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a5">A5</Link> 
+        <input type="text" placeholder="🔎 Rechercher" className="bg-white border border-black rounded-lg px-4 py-2 w-full max-w-md"/>
        <button title="Mode clair / sombre" onClick={() => setDarkMode(!darkMode)} className="ml-4" >
         {darkMode ? (
           <FaRegMoon className="text-white w-8 h-auto"/>
@@ -85,10 +88,13 @@ return (
     {/* MOBILE */}
     <div className="md:hidden">
       <Menu right styles={styles} isOpen={isOpen} onStateChange={({ isOpen }) => setIsOpen(isOpen)}>
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/dw">Développement Web</Link> 
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/cg">Communication Graphique</Link> 
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/cd">Communication Digital</Link> 
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/md">Marketing Digital</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/etudiant">Etudiants</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/intervenant">Intervenant</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a1">A1</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a2">A2</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a3">A3</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a4">A4</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a5">A5</Link> 
       </Menu>
       <button title="Mode clair / sombre" onClick={() => setDarkMode(!darkMode)} className="ml-4" >
         {darkMode ? (
