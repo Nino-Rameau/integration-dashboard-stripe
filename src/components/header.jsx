@@ -65,25 +65,6 @@ return (
       <img src="/img/logo.svg" className="w-16" /> 
     </Link> 
     
-    {/* DESKTOP */}
-    <nav className="hidden md:flex space-x-4">
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/etudiant">Etudiants</Link> 
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/intervenant">Intervenant</Link> 
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a1">A1</Link> 
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a2">A2</Link> 
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a3">A3</Link> 
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a4">A4</Link> 
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a5">A5</Link> 
-        <input type="text" placeholder="🔎 Rechercher" className="bg-white border border-black rounded-lg px-4 py-2 w-full max-w-md"/>
-       <button title="Mode clair / sombre" onClick={() => setDarkMode(!darkMode)} className="ml-4" >
-        {darkMode ? (
-          <FaRegMoon className="text-white w-8 h-auto"/>
-        ) : (
-          <FiSun className="w-8 h-auto"/>
-        )}
-      </button>
-    </nav>
-
 
     {/* MOBILE */}
     <div className="md:hidden">
@@ -95,15 +76,38 @@ return (
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a3">A3</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a4">A4</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a5">A5</Link> 
+        <input type="search" placeholder="🔎 Rechercher" className="bg-white border text-black border-black rounded-lg px-4 py-2 w-full max-w-md"/>
       </Menu>
       <button title="Mode clair / sombre" onClick={() => setDarkMode(!darkMode)} className="ml-4" >
-        {darkMode ? (
-          <FaRegMoon className="text-white w-8 h-auto"/>
-        ) : (
-          <FiSun className="w-8 h-auto"/>
-        )}
+          {darkMode ? (
+            <FaRegMoon className="text-white w-8 h-auto"/>
+          ) : (
+            <FiSun className="w-8 h-auto"/>
+          )}
       </button>
     </div>
+
+    {/* DESKTOP */}
+    <nav className="hidden md:flex space-x-4">
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/etudiant">Etudiants</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/intervenant">Intervenant</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a1">A1</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a2">A2</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a3">A3</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a4">A4</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a5">A5</Link> 
+        <input type="search" placeholder="🔎 Rechercher" className="bg-white border text-black border-black rounded-lg px-4 py-2 w-full max-w-md"/>
+        <button title="Mode clair / sombre" onClick={() => setDarkMode(!darkMode)} className="ml-4" >
+          {darkMode ? (
+            <FaRegMoon className="text-white w-8 h-auto"/>
+          ) : (
+            <FiSun className="w-8 h-auto"/>
+          )}
+      </button>
+    </nav>
+
+
+    
   </header> 
   ); 
 }; 

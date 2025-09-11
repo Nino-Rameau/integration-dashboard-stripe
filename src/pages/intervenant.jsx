@@ -9,7 +9,7 @@ function App() {
       { headerName: 'Prénom', field: 'prenom' },
       { headerName: 'Nom', field: 'nom' },
       { headerName: 'Âge', field: 'age' },
-      { headerName: 'Sexe', field: 'sexe' },
+      { headerName: 'genre', field: 'genre' },
       { headerName: 'Entreprise', field: 'entreprise' },
       { headerName: 'Ville', field: 'ville' },
       { headerName: 'Role', field: 'role' },

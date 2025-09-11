@@ -1,6 +1,6 @@
 # Dashboard de la NWS
 
-Ce projet est la création d'un **dashboard** pour la **Normandie Web School**. Il est réalisé avec **React.js** et **Tailwind CSS**.  
+Ce projet est la création d'un dashboard pour la Normandie Web School. Il est réalisé avec React.js et Tailwind CSS.  
 Il est entierrement responsive et dispose d'un mode clair / sombre
 Le dashboard n'est pas dynamique : les données sont directement intégrées dans le fichier data.json
 
@@ -11,8 +11,9 @@ Le dashboard n'est pas dynamique : les données sont directement intégrées dan
    - [Prérequis](#prérequis)
    - [Installation](#installation)
    - [Démarrage du projet](#démarrage-du-projet)
-3. [Auteur](#auteur)
-4. [Licence](#licence)
+3. [Visuel](#visuel)
+4. [Auteur](#auteur)
+5. [Licence](#licence)
 
 ## Technologies utilisées
 
@@ -47,6 +48,17 @@ npm install
 ```sh
 npm run dev
 ```
+
+## Visuel
+
+![Page d'accueil](img-readme/accueil.png)
+
+
+![page année 2](img-readme/A2.png)
+
+
+![tableau des étudiants](img-readme/tableau.png)
+
 
 ## Auteur
 

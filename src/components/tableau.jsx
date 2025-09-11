@@ -7,9 +7,17 @@ export default function GridExample( {data, coloneData} ) {
 
   return (
     <>
-      <div className="w-full md:w-[1020px] h-[200px] md:h-[400px]">
-        <AgGridReact rowData={data} columnDefs={coloneData} />
+      <div className="flex m-auto w-[80vw] h-[600px] md:h-[65vh]">
+        <AgGridReact 
+          rowData={data} 
+          columnDefs={coloneData} 
+          className="h-full w-full" 
+          pagination={true}
+          paginationPageSize={20}
+          defaultColDef={{flex: 1, minWidth: 80}}
+        />
       </div>
+
     </>
   );
 };

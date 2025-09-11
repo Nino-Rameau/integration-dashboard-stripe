@@ -4,6 +4,7 @@ import Card from '../components/card'
 import Calendrier from '../components/calendrier'
 import Absence from '../components/absence'
 import data from '../../data.json'
+import { Link } from "react-router-dom";
 
 import { MdPeopleAlt } from "react-icons/md";
 import { LuUniversity } from "react-icons/lu";
@@ -16,7 +17,7 @@ function App() {
       <h1 className='text-center text-4xl p-4 text-black dark:text-white'>Dashboard de la NWS</h1>
 
       <div className='flex flex-col md:flex-row flex-wrap justify-center items-center gap-10'>
-        <Card Icon={MdPeopleAlt} texte="70 étudiants au total"/>
+        <Card Icon={MdPeopleAlt} texte="150 étudiants au total"/>
         <Card Icon={GiDiploma} texte="4 spécialités"/>
         <Card Icon={GiDiploma} texte="3 mastères"/>
         <Card Icon={LuUniversity} texte="2 campus"/>
@@ -42,6 +43,7 @@ function App() {
       <div className='flex flex-col md:flex-row items-center md:items-start justify-center my-20 mx-auto gap-10'>
         <Absence nombre={data.absence.absents.length} liste={data.absence.absents} type="absent" />
         <Absence nombre={data.absence.retards.length} liste={data.absence.retards} type="en retard" />
+        <Link to="/a2/profil">Gabriel Drouet</Link>
       </div>
 
       <div className='mx-10 md:mx-100'>

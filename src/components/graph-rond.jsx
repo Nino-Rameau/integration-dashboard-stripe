@@ -1,4 +1,4 @@
-import { Pie, PieChart, ResponsiveContainer, Tooltip, Cell } from 'recharts';
+import { Pie, PieChart, ResponsiveContainer, Tooltip, Cell, Legend } from 'recharts';
 
 const color = [
   "#e94a34",
@@ -31,6 +31,8 @@ const GraphRond = ( {data} ) => {
             ))}
           </Pie>
             <Tooltip />
+            <Legend />
+            
           </PieChart>
         </ResponsiveContainer>
       </div>
