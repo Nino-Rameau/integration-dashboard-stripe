@@ -31,19 +31,18 @@ function App() {
           <GraphRond data={data.graphsAccueil.campus}/>
         </div>
         <div className='flex flex-col items-center'>
-          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par années :</h2>
+          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par année :</h2>
           <GraphRond data={data.graphsAccueil.annees}/>
         </div>
         <div className='flex flex-col items-center'>
-          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par types :</h2>
+          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par type :</h2>
           <GraphRond data={data.graphsAccueil.types}/>
         </div>
       </div>
 
       <div className='flex flex-col md:flex-row items-center md:items-start justify-center my-20 mx-auto gap-10'>
-        <Absence nombre={data.absence.absents.length} liste={data.absence.absents} type="absent" />
-        <Absence nombre={data.absence.retards.length} liste={data.absence.retards} type="en retard" />
-        <Link to="/a2/profil">Gabriel Drouet</Link>
+        <Absence nombre={data.absence.absents.length} liste={data.absence.absents} type="personne(s) absent(es)" />
+        <Absence nombre={data.absence.retards.length} liste={data.absence.retards} type="personne(s) en retard" />
       </div>
 
       <div className='mx-10 md:mx-100'>

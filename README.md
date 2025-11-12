@@ -17,20 +17,21 @@ Le dashboard n'est pas dynamique : les données sont directement intégrées dan
 
 ## Technologies utilisées
 
-- **React** : Bibliothèque JavaScript pour construire l'interface utilisateur
-- **Tailwind CSS** : Framework CSS pour le design
-- **React Router DOM** : Gestion de la navigation entre les pages
+- **[React](https://react.dev/)** : Bibliothèque JavaScript pour construire l'interface utilisateur
+- **[Tailwind CSS](https://tailwindcss.com/)** : Framework CSS pour le design
+- **[React Router DOM](https://reactrouter.com/home)** : Gestion de la navigation entre les pages
 - **[Recharts](https://recharts.org/en-fr)** : Création de graphiques
 - **[AG Grid](https://www.ag-grid.com/)** : Création de tableaux dynamiques
 - **[FullCalendar](https://fullcalendar.io/)** : Création de calendrier
 - **[react-burger-menu](https://negomi.github.io/react-burger-menu/)** : Menu burger
 - **[React Icons](https://react-icons.github.io/react-icons/)** : Icons
+- **[React Select](https://react-select.com/home)** : Barre de recherche
 
 ## Installation et lancement
 
 ### Prérequis
 
-- Node.js
+- Node.js 
 - npm
 
 ### Installation

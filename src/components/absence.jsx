@@ -2,7 +2,7 @@ const Absence = ({ nombre, liste, type }) => {
   return (
     <details className="border border-black dark:border-white rounded p-2 max-w-[40%] text-nowrap min-w-max">
       <summary className="cursor-pointer text-black dark:text-white">
-        {nombre} personne {type}
+        {nombre} {type}
       </summary>
       <ul className="ml-4 list-disc text-black dark:text-white">
         {liste.map((personne, index) => (

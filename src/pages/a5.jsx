@@ -16,7 +16,7 @@ function A5() {
           <GraphRond data={data.A5.genre}/>
         </div>
         <div className='flex flex-col items-center'>
-          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par age :</h2>
+          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par âge :</h2>
           <GraphRond data={data.A5.age}/>
         </div>
         <div className='flex flex-col items-center'>
@@ -24,7 +24,7 @@ function A5() {
           <GraphRond data={data.A5.spe}/>
         </div>
         <div className='flex flex-col items-center'>
-          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par status :</h2>
+          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par statut :</h2>
           <GraphRond data={data.A5.status}/>
         </div>
       </div>

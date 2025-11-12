@@ -16,7 +16,7 @@ function A2() {
           <GraphRond data={data.A2.genre}/>
         </div>
         <div>
-          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par age :</h2>
+          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par âge :</h2>
           <GraphRond data={data.A2.age}/>
         </div>
         <div>
@@ -24,7 +24,7 @@ function A2() {
           <GraphRond data={data.A2.spe}/>
         </div>
         <div>
-          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par status :</h2>
+          <h2 className='text-xl text-center text-black dark:text-white'>Répartition des étudiants par statut :</h2>
           <GraphRond data={data.A2.status}/>
         </div>
       </div>

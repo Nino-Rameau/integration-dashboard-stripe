@@ -1,14 +1,33 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { bubble as Menu } from 'react-burger-menu';
 import { useState } from "react";
 import { FiSun } from "react-icons/fi";
 import { FaRegMoon } from "react-icons/fa";
+import Select from 'react-select';
 import Darkmod from "./darkmod";
+import data from '../../data.json';
 
 const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [darkMode, setDarkMode] = Darkmod(); 
+    const navigate = useNavigate();
+
+    // Préparer les options pour react-select
+    const options = data.etudiant.map(etu => ({
+      value: etu,
+      label: `${etu.prenom} ${etu.nom} - ${etu.diplome} A${etu.annee}`
+    }));
+
+    const handleSearchChange = (selectedOption) => {
+      if (selectedOption) {
+        const etu = selectedOption.value;
+        const initialePrenom = etu.prenom.charAt(0).toLowerCase();
+        const url = `/a${etu.annee}/${initialePrenom}${etu.nom.toLowerCase()}`;
+        navigate(url);
+      }
+    };
+
 
   const styles = {
     bmBurgerButton: {
@@ -70,13 +89,22 @@ return (
     <div className="md:hidden">
       <Menu right styles={styles} isOpen={isOpen} onStateChange={({ isOpen }) => setIsOpen(isOpen)}>
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/etudiant">Etudiants</Link> 
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/intervenant">Intervenant</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/intervenant">Intervenants</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a1">A1</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a2">A2</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a3">A3</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a4">A4</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a5">A5</Link> 
-        <input type="search" placeholder="🔎 Rechercher" className="bg-white border text-black border-black rounded-lg px-4 py-2 w-full max-w-md"/>
+        <div className="w-full">
+          <Select
+            options={options}
+            onChange={handleSearchChange}
+            placeholder="Rechercher"
+            isClearable
+            isSearchable
+            className="my-2"
+          />
+        </div>
       </Menu>
       <button title="Mode clair / sombre" onClick={() => setDarkMode(!darkMode)} className="ml-4" >
           {darkMode ? (
@@ -88,15 +116,22 @@ return (
     </div>
 
     {/* DESKTOP */}
-    <nav className="hidden md:flex space-x-4">
+    <nav className="hidden md:flex space-x-4 items-center">
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/etudiant">Etudiants</Link> 
-        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/intervenant">Intervenant</Link> 
+        <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/intervenant">Intervenants</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a1">A1</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a2">A2</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a3">A3</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a4">A4</Link> 
         <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to="/a5">A5</Link> 
-        <input type="search" placeholder="🔎 Rechercher" className="bg-white border text-black border-black rounded-lg px-4 py-2 w-full max-w-md"/>
+        <Select
+          options={options}
+          onChange={handleSearchChange}
+          placeholder="🔎 Rechercher"
+          isClearable
+          isSearchable
+          className="w-64"
+        />
         <button title="Mode clair / sombre" onClick={() => setDarkMode(!darkMode)} className="ml-4" >
           {darkMode ? (
             <FaRegMoon className="text-white w-8 h-auto"/>

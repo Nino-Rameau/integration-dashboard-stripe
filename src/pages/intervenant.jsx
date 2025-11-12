@@ -6,15 +6,15 @@ import Grille from '../components/tableau'
 function App() {
 
     const colonne = [
-      { headerName: 'Prénom', field: 'prenom' },
-      { headerName: 'Nom', field: 'nom' },
+      { headerName: 'Prénom', field: 'prenom', pinned: 'left' },
+      { headerName: 'Nom', field: 'nom', pinned: 'left' },
       { headerName: 'Âge', field: 'age' },
-      { headerName: 'genre', field: 'genre' },
+      { headerName: 'Genre', field: 'genre' },
       { headerName: 'Entreprise', field: 'entreprise' },
       { headerName: 'Ville', field: 'ville' },
-      { headerName: 'Role', field: 'role' },
+      { headerName: 'Rôle', field: 'role' },
       { headerName: 'Numéro de téléphone', field: 'num_tel' },
-      { headerName: 'email', field: 'email' },
+      { headerName: 'Email', field: 'email' },
       { headerName: "Type d'intervenant", field: 'type_intervenant' },
   ];
 

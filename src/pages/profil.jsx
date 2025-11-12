@@ -4,16 +4,14 @@ import GraphNote from '../components/graph-Note-eleve'
 import { CiClock2 } from "react-icons/ci";
 import { FaUserXmark } from "react-icons/fa6";
 
-const Profil = () => {
-  
-  let rang = 0
+const Profil = ({rang}) => {
   
   return (
     <>
       <h1 className="text-white text-5xl text-center">{data.etudiant[rang].nom} {data.etudiant[rang].prenom}</h1>
     
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-30 m-10">
-            <img src="/public/img/photo.jpeg" alt="Photo de profil de l'etudiant" className="rounded-full" width="150px" height="150px"/>
+            <img src="/public/img/photo.jpg" alt="Photo de profil de l'etudiant" className="rounded-full" width="150px" height="150px"/>
             <ul className='text-black dark:text-white'>
                 <li>Age : {data.etudiant[rang].age}</li>
                 <li>Genre : {data.etudiant[rang].genre}</li>

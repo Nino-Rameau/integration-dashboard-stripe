@@ -10,8 +10,17 @@ import Profil from './pages/profil';
 import Etudiant from './pages/etudiant';
 import Intervenant from './pages/intervenant';
 import Layout from "./components/layout";
+import data from '../data.json'
 
 function App() {
+  let rang = -1;
+  const listeEleve = data.etudiant.map((eleve, index) => {
+    const initialePrenom = eleve.prenom.charAt(0).toLowerCase();
+    const url = `/a${eleve.annee}/${initialePrenom}${eleve.nom.toLowerCase()}`;
+    rang++
+
+    return <Route key={index} path={url} element={<Profil rang={rang} />} />;
+  });
 
   return (
     <Router>
@@ -25,7 +34,7 @@ function App() {
           <Route path="/a3" element={<A3 />} />
           <Route path="/a4" element={<A4 />} />
           <Route path="/a5" element={<A5 />} />
-          <Route path="/a2/Profil" element={<Profil />} />
+          {listeEleve}
         </Routes>
       </Layout>
     </Router>
