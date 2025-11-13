@@ -13,11 +13,10 @@ export default function GridExample( {data, coloneData} ) {
           columnDefs={coloneData} 
           className="h-full w-full" 
           pagination={true}
-          paginationPageSize={20}
+          paginationPageSize={50}
           defaultColDef={{flex: 1, minWidth: 80}}
         />
       </div>
-
     </>
   );
 };

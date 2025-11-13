@@ -5,9 +5,9 @@ const GraphNote = ({ data }) => {
     <div style={{ width: '100%', height: 400 }}>
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart data={data} >
-          <CartesianGrid stroke="#ffffff" />
-          <XAxis dataKey="name"   tick={{ fill: '#ffffff', fontSize: 14 }} />
-          <YAxis   tick={{ fill: '#ffffff', fontSize: 14 }} />
+          <CartesianGrid stroke="#aaa" />
+          <XAxis dataKey="name"   tick={{ fill: '#aaa', fontSize: 14 }} />
+          <YAxis   tick={{ fill: '#aaa', fontSize: 14 }} />
           <Tooltip />
           <Legend />
           <Bar dataKey="Rouen" barSize={20} fill="#30b3cC" />

@@ -21,7 +21,7 @@ export default function Example( {data} ) {
           <Tooltip />
           <Legend />
           <Line type="monotone" dataKey="value" stroke="#30b3cC" />
-          <Line type="monotone" dataKey="moyenneclasse" stroke="#ff7300" />
+          <Line type="monotone" dataKey="moyenne classe" stroke="#ff7300" />
         </LineChart>
       </ResponsiveContainer>
     </div>

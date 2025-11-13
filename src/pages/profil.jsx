@@ -8,7 +8,7 @@ const Profil = ({rang}) => {
   
   return (
     <>
-      <h1 className="text-white text-5xl text-center">{data.etudiant[rang].nom} {data.etudiant[rang].prenom}</h1>
+      <h1 className="text-black dark:text-white text-5xl text-center">{data.etudiant[rang].nom} {data.etudiant[rang].prenom}</h1>
     
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-30 m-10">
             <img src="/img/photo.jpg" alt="Photo de profil de l'etudiant" className="rounded-full" width="150px" height="150px"/>
