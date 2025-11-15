@@ -21,19 +21,19 @@ const Profil = ({rang}) => {
             <ul className='text-black dark:text-white'>
                 <li>Année en cours : {data.etudiant[rang].annee}</li>
                 <li>Campus : {data.etudiant[rang].campus}</li>
-                <li>Diplome en cours : {data.etudiant[rang].diplome}</li>
+                <li>Diplôme en cours : {data.etudiant[rang].diplome}</li>
                 <li>Spécialité : {data.etudiant[rang].spe}</li>
                 <li>Statut : {data.etudiant[rang].statut}</li>
             </ul>
         </div>
 
-        <h2 className="text-black dark:text-white text-3xl text-center">Abscence et retard</h2>
+        <h2 className="text-black dark:text-white text-3xl text-center">Absence(s) et retard(s)</h2>
         <div className='flex flex-col md:flex-row md:justify-evenly items-center m-auto'>
-          <Card Icon={FaUserXmark} texte={data.etudiant[rang].absence + " absence à justifier"}/>
-          <Card Icon={CiClock2} texte={data.etudiant[rang].retard + " retard à justifier"}/>
+          <Card Icon={FaUserXmark} texte={data.etudiant[rang].absence + " absence(s) à justifier"}/>
+          <Card Icon={CiClock2} texte={data.etudiant[rang].retard + " retard(s) à justifier"}/>
         </div>
 
-        <h2 className="text-black dark:text-white text-3xl text-center">Note au partiel</h2>
+        <h2 className="text-black dark:text-white text-3xl text-center">Notes aux partiels</h2>
         <div className='flex flex-row justify-evenly'>
           <GraphNote data={Object.values(data.etudiant[rang].note)} />
         </div>

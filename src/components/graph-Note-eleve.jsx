@@ -20,7 +20,7 @@ export default function Example( {data} ) {
           <YAxis domain={[0, 20]}/>
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="value" stroke="#30b3cC" />
+          <Line type="monotone" dataKey="note" stroke="#30b3cC" />
           <Line type="monotone" dataKey="moyenne classe" stroke="#ff7300" />
         </LineChart>
       </ResponsiveContainer>

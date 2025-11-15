@@ -17,7 +17,7 @@ const GraphRond = ( {data} ) => {
         <ResponsiveContainer width="100%" height="100%">
           <PieChart width={900} height={900}>
             <Pie
-            dataKey="value"
+            dataKey="note"
             isAnimationActive={false}
             data={data}
             outerRadius={80}
