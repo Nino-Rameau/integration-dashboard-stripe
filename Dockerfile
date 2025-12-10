@@ -19,4 +19,4 @@ COPY --from=builder /app/dist ./build
 
 EXPOSE 8089
 
-CMD ["serve", "-s", "build", "-l", "8089", "-H", "0.0.0.0"]
+CMD ["serve", "-s", "build", "-l", "8089"]
