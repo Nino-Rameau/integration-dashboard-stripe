@@ -1,4 +1,3 @@
-# Étape 1 - Build
 FROM node:20-bullseye AS builder
 
 WORKDIR /app
@@ -9,7 +8,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# Étape 2 - Serve
+
 FROM node:20-bullseye
 
 WORKDIR /app
