@@ -97,7 +97,7 @@ L'application est alors accessible sur : [dashboard-nws.nino-rameau.fr](https://
 
 ## Auteur
 
-**Nino Rameau** - [LinkedIn](https://www.linkedin.com/in/nino-rameau-1a0636332/) - [GitHub](https://github.com/Nino-Rameau)
+**[Nino Rameau](https://nino-rameau.fr)** - [LinkedIn](https://www.linkedin.com/in/nino-rameau-1a0636332/) - [GitHub](https://github.com/Nino-Rameau)
 
 ## Licence
 
