@@ -1,10 +1,7 @@
 services:
   dashboard:
-    # build donne le lien vers le Dockerfile
     build: .
-    # container_name définit le nom du conteneur car par défaut Docker lui en donne un aléatoire et moins simple a comprendre
     container_name: dashboard
-    # on link le conteneur au réseau traefik pour qu'il puisse communiquer avec le reverse proxy
     networks:
       - traefik
     labels:
@@ -12,8 +9,9 @@ services:
       - "traefik.http.routers.dashboard.rule=Host(`dashboard-nws.nino-rameau.fr`)"
       - "traefik.http.routers.dashboard.entrypoints=websecure"
       - "traefik.http.routers.dashboard.tls.certresolver=letsencrypt"
+      - "traefik.http.middlewares.no-index.headers.customresponseheaders.X-Robots-Tag=noindex, nofollow, nosnippet, noarchive"
       - "traefik.docker.network=traefik"
-    # On redémarre automatiquement le conteneur en cas de problème
+      - "traefik.http.routers.dashboard.middlewares=no-index"
     restart: always
 
 networks:
